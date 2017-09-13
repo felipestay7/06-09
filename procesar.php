@@ -38,7 +38,7 @@ if (isset($_REQUEST['alumno_formulario'])){
 }
 
 
-if (issset($_REQUEST['ramo_formulario'])){
+if (isset($_REQUEST['ramo_formulario'])){
 	$ramo = $_REQUEST['ramo'];
     $nota = $_REQUEST['nota'];
 
