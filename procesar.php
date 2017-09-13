@@ -16,10 +16,10 @@ function GuardarFormularioAlumno($nombre, $apellido, $rut)
 }
 
 
-function GuardarFormularioRamo($ramo, $nota)
+function GuardarFormularioRamo($nombre_ramo, $nota)
 {
 	require 'conexion.php';
-    $sql = "INSERT INTO ramo(nombre_ramo, nota) VALUES(?,?,?)";
+    $sql = "INSERT INTO ramo(nombre_ramo, nota) VALUES(?,?)";
     $smt = $conn->prepare($sql);
     $smt->bindParam(1, $nombre_ramo);
     $smt->bindParam(2, $nota);
