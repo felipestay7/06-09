@@ -29,6 +29,8 @@
 					 <br>
 					 Nota: <input type="text" name="nota">
 					 <br>
+				     Rut: <input type="text" name="rut">
+				    <br>
 					 <input type="hidden" name="ramo_formulario">
 					 <input type="submit" value="enviar" class="btn btn-danger">
                </form>

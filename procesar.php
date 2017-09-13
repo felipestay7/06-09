@@ -16,13 +16,14 @@ function GuardarFormularioAlumno($nombre, $apellido, $rut)
 }
 
 
-function GuardarFormularioRamo($nombre_ramo, $nota)
+function GuardarFormularioRamo($nombre_ramo, $not, $rut)
 {
 	require 'conexion.php';
-    $sql = "INSERT INTO ramo(nombre_ramo, nota) VALUES(?,?)";
+    $sql = "INSERT INTO ramo(nombre_ramo, nota, rut) VALUES(?,?,?)";
     $smt = $conn->prepare($sql);
     $smt->bindParam(1, $nombre_ramo);
     $smt->bindParam(2, $nota);
+    $smt->bindParam(3, $rut);
     $smt->execute();
     $resultado = $smt->fetchALL();
     $conn = null;
@@ -41,8 +42,9 @@ if (isset($_REQUEST['alumno_formulario'])){
 if (isset($_REQUEST['ramo_formulario'])){
 	$ramo = $_REQUEST['ramo'];
     $nota = $_REQUEST['nota'];
+    $nota = $_REQUEST['rut'];
 
-    guardarFormularioRamo($ramo, $nota);
+    guardarFormularioRamo($ramo, $nota, $rut);
 }
 
 ?>
