@@ -36,6 +36,7 @@ function GuardarFormularioRamo($ramo, $nota)
     $conn = null;
     return $resultado;
 }
+
 if (issset($_REQUEST['ramo_formulario'])){
 	$ramo = $_REQUEST['ramo'];
     $nota = $_REQUEST['nota'];
