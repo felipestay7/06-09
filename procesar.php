@@ -23,6 +23,8 @@ if (isset($_REQUEST['alumno_formulario'])){
 	guardarFormularioAlumno($nombre, $apellido, $rut);
 }
 
+require 'conexion.php';
+
 function GuardarFormularioRamo($ramo, $nota)
 {
     $sql = "INSERT INTO ramo(ramo, nota) VALUES(?,?,?)";
